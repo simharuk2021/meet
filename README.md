@@ -9,8 +9,8 @@ information about an event
     Scenario 1: An event element is collapsed by default
 
         Given - a user is on the main view
-        When - an event is displayed on the view
-        Then - the event details will be collapsed
+        When  - an event is displayed on the view
+        Then  - the event details will be collapsed
 
     Scenario 2: User can expand an event to see its details
 
