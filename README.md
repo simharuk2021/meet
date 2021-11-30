@@ -1,22 +1,25 @@
 # meet app
 The purpose of the app is to provide a meet up app which allows users to retrieve events (filtered by city) using a Google calender API.  The app is going to be severless and also allowing users a level of offline support.
 
-# user stories
+# User Stories
 
 2 )As a user, I would like to be able to show/hide event details so that I can see more/less
 information about an event
 
     Scenario 1: An event element is collapsed by default
+
         Given - a user is on the main view
         When - an event is displayed on the view
         Then - the event details will be collapsed
 
     Scenario 2: User can expand an event to see its details
+
         Given - a user has a list of events displayed
         When  - the user has selected an event
         Then  - display the details of the event
 
     Scenario 3: User can collapse an event to hide its details  
+
         Given - the user is viewing the expanded event details
         When  - the user has collapsed the event details
         Then  - the event details will be collapsed
@@ -25,11 +28,13 @@ information about an event
 that I can see more or fewer events in the events list at once.
 
     Scenario 1: When user hasn’t specified a number, 32 is the default number   
+
         Given - the user is viewing the events on the main page
         When  - the user hasn't selected the number of events to be displayed
         Then  - the default number of events displayed will be 32
 
     Scenario 2: User can change the number of events they want to see
+
         Given - the user is viewing the events on the main page
         When  - the user has selected the number of events to be visible
         Then  - the number of events selected will be the amount displayed
@@ -38,11 +43,13 @@ that I can see more or fewer events in the events list at once.
 viewed the last time I was online.
 
     Scenario 1: Show cached data when there’s no internet connection
+
         Given - a user is offline
         When  - the user is accessing the app 
         Then  - show cached data from the most recent session
 
     Scenario 2: Show error when user changes the settings (city, time range)
+
         Given - a user is offline
         When  - a user changes the city or time range
         Then  - an appropriate error message is displayed
@@ -51,6 +58,7 @@ viewed the last time I was online.
 that I know what events are organized in which city.
 
     Scenario 1: Show a chart with the number of upcoming events in each city
+    
         Given - the user is viewing the main page
         When  - a user selects the overview of data visualisation option 
         Then  - show a graph depicting the cities and corresponding number of events
