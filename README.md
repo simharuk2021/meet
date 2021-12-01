@@ -3,7 +3,7 @@ The purpose of the app is to provide a meet up app which allows users to retriev
 
 # User Stories
 
-2 )As a user, I would like to be able to show/hide event details so that I can see more/less
+2) As a user, I would like to be able to show/hide event details so that I can see more/less
 information about an event
 
     Scenario 1: An event element is collapsed by default
@@ -58,7 +58,7 @@ viewed the last time I was online.
 that I know what events are organized in which city.
 
     Scenario 1: Show a chart with the number of upcoming events in each city
-    
+
         Given - the user is viewing the main page
         When  - a user selects the overview of data visualisation option 
         Then  - show a graph depicting the cities and corresponding number of events
