@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-// import Event from './Event';
-import CitySearch from './CitySearch';
+import Event from './Event';
 
 class EventList extends Component {
-    render() {
-        return (<div>
-      <CitySearch />
-      <EventList />
+  render() {
+    const { events } = this.props;
+    return (
+      <div>
+      <ul className="EventList">
+        {events.map(event =>
+          <li>
+            <Event event={event} />
+          </li>
+        )}
+      </ul>
       </div>
-      );
-      }
-    }
-
+    );
+  }
+}
 export default EventList;

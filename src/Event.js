@@ -22,16 +22,14 @@ handleClick = () => {
             {!collapsed &&
             <div className={`extra-details ${this.state.collapsed ? "hide" : "show"}`}>
               <br />
+              <h3>About the event:</h3>
+                  
+                  <p className="description">{event.description}</p>
             </div>
           }
             <button className={`${collapsed ? "show" : "hide"}-details`} onClick={this.handleClick}>
             {collapsed ? "show Details" : "Hide Details"}
             </button>
-            <div className={`more-info ${collapsed ? `hidden` : `show`}`}>
-                  <h3>About the event:</h3>
-                  
-                  <p className="description">{event.description}</p>
-            </div>
             </div>
     }
 }
