@@ -7,6 +7,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from'./NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
+import { Container } from 'react-bootstrap';
 
 
 class App extends Component {
@@ -70,13 +71,13 @@ async componentDidMount() {
 
     
   return (
-    <div className="App">
+    <Container className="App">
       <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
       <EventList events={this.state.events}/>
       <NumberOfEvents 
                 numberOfEvents={this.state.numberOfEvents} 
                 updateNumberOfEvents={this.updateNumberOfEvents} />
-    </div>
+    </Container>
   );
  }
 }
