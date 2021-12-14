@@ -18,6 +18,7 @@ handleClick = () => {
         return <div className="event">
             <span className="summary" as="h4">{event.summary}</span>
             <span className="location" as="h4">{event.location}</span>
+            <span className="start" as="h4">{event.start.dateTime} ({event.start.timeZone})</span>
             
             {!collapsed &&
             <div className={`extra-details ${this.state.collapsed ? "hide" : "show"}`}>
