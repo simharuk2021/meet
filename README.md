@@ -6,11 +6,23 @@ The purpose of the app is to provide a meet up app which allows users to retriev
 1) As a user I would like to be ablt to Filter the Events so they can be displyed by City
 
     Scenario 1: When user hasn’t searched for a city, show upcoming events from all cities.
+        
+        Given - User has not searched for any city
+        When  - the User opens the application
+        Then  - User should see a list of all upcoming events
     
     Scenario 2: User should see a list of suggestions when they search for a city.
 
+        Given - the main page of the application is open
+        When  - User starts typing in the City search box
+        Then  - User should see a list of suggested cities based on their character input
+        
     Scenario 3: User can select a city from the suggested list.
-
+    
+        Given - the user has typing in the name of a city into the search box
+        When  - the user clicks on or selects a city from the suggestion list
+        Then  - the list of events for the city should be changed to the those specified by the                       user's city selection.
+        
 2) As a user, I would like to be able to show/hide event details so that I can see more/less
 information about an event
 
