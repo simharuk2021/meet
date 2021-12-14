@@ -544,6 +544,146 @@ const mockData = [
           useDefault: true
         },
         eventType: "default"
+      },
+      {
+        kind: "calendar#event",
+        etag: "\"3187232583216000\"",
+        id: "3m5n6mcl1aqrdsg6k5vkr6to5p_20200804T163000Z",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=M201bjZtY2wxYXFyZHNnNms1dmtyNnRvNXBfMjAyMDA4MDRUMTYzMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
+        created: "2020-07-01T13:54:32.000Z",
+        updated: "2020-07-01T15:11:31.608Z",
+        summary: "Build Your First App with JavaScript",
+        description: "You know basic HTML and CSS, and interested to learn the next thing about web development? Well, you are at the right place. Our workshop will take you to the amazing world of JavaScript. \n\nIn this workshop, you'll:\n- Learn JavaScript, from basics to advanced topics\n- Create your first app",
+        location: "Amsterdam, Netherlands",
+        creator: {
+          email: "fullstackwebdev@careerfoundry.com",
+          self: true
+        },
+        organizer: {
+          email: "fullstackwebdev@careerfoundry.com",
+          self: true
+        },
+        start: {
+          dateTime: "2020-08-04T18:30:00+02:00",
+          timeZone: "Europe/Berlin"
+        },
+        end: {
+          dateTime: "2020-08-04T19:30:00+02:00",
+          timeZone: "Europe/Berlin"
+        },
+        recurringEventId: "3m5n6mcl1aqrdsg6k5vkr6to5p",
+        originalStartTime: {
+          dateTime: "2020-08-04T18:30:00+02:00",
+          timeZone: "Europe/Berlin"
+        },
+        iCalUID: "3m5n6mcl1aqrdsg6k5vkr6to5p@google.com",
+        sequence: 1,
+        hangoutLink: "https://meet.google.com/vxc-jcvs-juv",
+        conferenceData: {
+          entryPoints: [
+            {
+              entryPointType: "video",
+              uri: "https://meet.google.com/vxc-jcvs-juv",
+              label: "meet.google.com/vxc-jcvs-juv"
+            },
+            {
+              entryPointType: "more",
+              uri: "https://tel.meet/vxc-jcvs-juv?pin=7178471106778",
+              pin: "7178471106778"
+            },
+            {
+              regionCode: "DE",
+              entryPointType: "phone",
+              uri: "tel:+49-40-8081619886",
+              label: "+49 40 8081619886",
+              pin: "257304091"
+            }
+          ],
+          conferenceSolution: {
+            key: {
+              type: "hangoutsMeet"
+            },
+            name: "Google Meet",
+            iconUri: "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png"
+          },
+          conferenceId: "vxc-jcvs-juv",
+          signature: "AGirE/L1nRxxage7/xYEiTpkVsOW"
+        },
+        reminders: {
+          useDefault: true
+        },
+        eventType: "default"
+      },
+      {
+        kind: "calendar#event",
+        etag: "\"3187232499498000\"",
+        id: "7rclpdp8egm60g7kepei7j0bt9_20200805T090000Z",
+        status: "confirmed",
+        htmlLink: "https://www.google.com/calendar/event?eid=N3JjbHBkcDhlZ202MGc3a2VwZWk3ajBidDlfMjAyMDA4MDVUMDkwMDAwWiBmdWxsc3RhY2t3ZWJkZXZAY2FyZWVyZm91bmRyeS5jb20",
+        created: "2020-07-01T15:10:03.000Z",
+        updated: "2020-07-01T15:10:49.749Z",
+        summary: "Hello JavaScript!!",
+        description: "You know basic HTML and CSS, and interested to learn the next thing about web development? You are at the right place. Our workshop will take you to the amazing world of JavaScript. \n\nIn this workshop, you'll:- Learn JavaScript, from basics to advanced topics- Create your first app",
+        location: "Bangkok, Thailand",
+        creator: {
+          email: "fullstackwebdev@careerfoundry.com",
+          self: true
+        },
+        organizer: {
+          email: "fullstackwebdev@careerfoundry.com",
+          self: true
+        },
+        start: {
+          dateTime: "2020-08-05T11:00:00+02:00",
+          timeZone: "Europe/Berlin"
+        },
+        end: {
+          dateTime: "2020-08-05T12:00:00+02:00",
+          timeZone: "Europe/Berlin"
+        },
+        recurringEventId: "7rclpdp8egm60g7kepei7j0bt9",
+        originalStartTime: {
+          dateTime: "2020-08-05T11:00:00+02:00",
+          timeZone: "Europe/Berlin"
+        },
+        iCalUID: "7rclpdp8egm60g7kepei7j0bt9@google.com",
+        sequence: 1,
+        hangoutLink: "https://meet.google.com/tbu-cgma-ikb",
+        conferenceData: {
+          entryPoints: [
+            {
+              entryPointType: "video",
+              uri: "https://meet.google.com/tbu-cgma-ikb",
+              label: "meet.google.com/tbu-cgma-ikb"
+            },
+            {
+              entryPointType: "more",
+              uri: "https://tel.meet/tbu-cgma-ikb?pin=5464596701700",
+              pin: "5464596701700"
+            },
+            {
+              regionCode: "DE",
+              entryPointType: "phone",
+              uri: "tel:+49-40-8081618071",
+              label: "+49 40 8081618071",
+              pin: "382271360"
+            }
+          ],
+          conferenceSolution: {
+            key: {
+              type: "hangoutsMeet"
+            },
+            name: "Google Meet",
+            iconUri: "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png"
+          },
+          conferenceId: "tbu-cgma-ikb",
+          signature: "AGirE/JMEW9+pm1Esv5ik3OMrH7A"
+        },
+        reminders: {
+          useDefault: true
+        },
+        eventType: "default"
       }
 
    ];
