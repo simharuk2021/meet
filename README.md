@@ -3,6 +3,14 @@ The purpose of the app is to provide a meet up app which allows users to retriev
 
 # User Stories
 
+1) As a user I would like to be ablt to Filter the Events so they can be displyed by City
+
+    Scenario 1: When user hasn’t searched for a city, show upcoming events from all cities.
+    
+    Scenario 2: User should see a list of suggestions when they search for a city.
+
+    Scenario 3: User can select a city from the suggested list.
+
 2) As a user, I would like to be able to show/hide event details so that I can see more/less
 information about an event
 
