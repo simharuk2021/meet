@@ -12,11 +12,10 @@ defineFeature(feature, test => {
 
 //Scenario 1
     test('An event element is collapsed by default', ({ given, when, then }) => {
-        let AppWrapper;
+        
         given('- a user is on the main view', () => {
-        AppWrapper = mount(<App />);
-        expect(AppWrapper.find('.EventList')).toHaveLength(mockData.length);
-    });
+      
+           });
         let EventListWrapper;
         when('- an event is displayed on the view', () => {
         EventListWrapper = shallow(<EventList events={mockData} />);
