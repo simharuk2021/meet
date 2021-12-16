@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class NumberOfEvents extends Component {
     
-    // state = {
-    //     numberOfEvents: 32,
-    //   }
+    state = {
+        numberOfEvents: 32,
+      }
       
         render() {
           return (
