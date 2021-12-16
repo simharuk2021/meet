@@ -30,7 +30,7 @@ handleClick = () => {
             </div>
           }
             <Button variant = "light" className={`${collapsed ? "show" : "hide"}-details`} onClick={this.handleClick}>
-            {collapsed ? "show Details" : "Hide Details"}
+            {collapsed ? "Show Details" : "Hide Details"}
             </Button>
             </div>
             </Card>
