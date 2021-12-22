@@ -18,7 +18,8 @@ class App extends Component {
   events: [],
   locations: [],
   numberOfEvents: 32,
-  currentLocation: 'all'
+  currentLocation: 'all',
+  errorText: '',  
   };
 }
 async componentDidMount() {
@@ -61,6 +62,7 @@ async componentDidMount() {
       });
     } else {
       this.setState({
+        errorText: '',
         numberOfEvents: newNumber,
       });
       this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
@@ -75,7 +77,8 @@ async componentDidMount() {
       <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
       <NumberOfEvents 
                 numberOfEvents={this.state.numberOfEvents} 
-                updateNumberOfEvents={this.updateNumberOfEvents} />
+                updateNumberOfEvents={this.updateNumberOfEvents}
+                errorText={this.state.errorText} />
       <EventList events={this.state.events}/>
     </Container>
   );
