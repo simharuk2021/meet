@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { ErrorAlert } from './Alert';
+import { Row } from 'react-bootstrap';
 
 class NumberOfEvents extends Component {
     
-    state = {
-        numberOfEvents: 32,
-      }
+    // state = {
+    //     numberOfEvents: 32,
+    //   }
       
         render() {
           return (
@@ -14,6 +16,9 @@ class NumberOfEvents extends Component {
                     value={this.props.numberOfEvents}
                     className="number-of-events"
                     onChange={(e) => this.props.updateNumberOfEvents(e)} />
+                    <Row>
+                    <ErrorAlert text={this.props.errorText} />
+                    </Row>
             </div>
           );
         }

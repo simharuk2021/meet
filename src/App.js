@@ -74,7 +74,8 @@ async componentDidMount() {
     
   return (
     <Container className="App">
-      <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+      <CitySearch locations={this.state.locations} 
+                  updateEvents={this.updateEvents} />
       <NumberOfEvents 
                 numberOfEvents={this.state.numberOfEvents} 
                 updateNumberOfEvents={this.updateNumberOfEvents}
