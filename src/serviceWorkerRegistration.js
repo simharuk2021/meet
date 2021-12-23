@@ -9,7 +9,6 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://cra.link/PWA
-import { WarningAlert } from './Alert';
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
@@ -121,9 +120,7 @@ function checkValidServiceWorker(swUrl, config) {
       }
     })
     .catch(() => {
-     
-      <WarningAlert text="Offline data in cache mode active" /> 
-      // console.log('No internet connection found. App is running in offline mode.');
+      console.log('No internet connection found. App is running in offline mode.');
     });
 }
 
