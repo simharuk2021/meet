@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Event from './Event';
-import { WarningAlert } from './Alert';
 
 class EventList extends Component {
   render() {
@@ -8,11 +7,6 @@ class EventList extends Component {
     return (
       <div>
       <ul className="EventList">
-      {!navigator.onLine ? (
-						<WarningAlert text="You are offline, the events list has been loaded from the Cache!" />
-					) : (
-						''
-					)}
         {events.map(event =>
           <li>
             <Event event={event} />
