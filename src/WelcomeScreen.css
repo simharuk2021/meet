@@ -5,6 +5,15 @@
     top: 0;
     background: white;
     }
+
+.WelcomeScreen__content {
+    background-color: white;
+    padding-top: 80px;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    }
+
     .login-button {
     color: #494949;
     text-transform: uppercase;
@@ -34,7 +43,7 @@
 
 .google-icon-wrapper {
     position: absolute;
-    margin-top: 10rem;
+    margin-top: 1px;
     margin-left: 1px;
     width: 40px;
     height: 40px;
@@ -43,7 +52,7 @@
     }
     .google-icon {
     position: absolute;
-    margin-top: 11rem;
+    margin-top: 11px;
     margin-left: -8px;
     width: 18px;
     height: 18px;
