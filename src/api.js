@@ -16,7 +16,7 @@ import NProgress from 'nprogress';
   const tokenCheck = accessToken && (await checkToken(accessToken));
 
   if (!accessToken || tokenCheck.error) {
-    await localStorage.removeItem("access_token");
+    await localStorage.removeItem('access_token');
     const searchParams = new URLSearchParams(window.location.search);
     const code = await searchParams.get("code");
     if (!code) {
@@ -42,7 +42,7 @@ export const checkToken = async (accessToken) => {
 };
 
 export const getEvents = async () => {
-  NProgress.start();
+  
 
   if (window.location.href.startsWith("http://localhost")) {
     NProgress.done();
@@ -51,10 +51,9 @@ export const getEvents = async () => {
 
   if (!navigator.onLine) {
     const data = localStorage.getItem("lastEvents");
-    NProgress.done();
     return data ? JSON.parse(data).events : [];
 }
-
+  NProgress.start();
   const token = await getAccessToken();
 
   if (token) {
@@ -95,7 +94,7 @@ const getToken = async (code) => {
     })
     .catch((error) => error);
 
-  access_token && localStorage.setItem("access_token", access_token);
+  access_token && localStorage.setItem('access_token', access_token);
 
   return access_token;
 };
