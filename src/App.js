@@ -6,8 +6,7 @@ import CitySearch from './CitySearch';
 // import Event from './Event';
 import NumberOfEvents from'./NumberOfEvents';
 import WelcomeScreen from './WelcomeScreen';
-import { getEvents, extractLocations, checkToken, getAccessToken } from
-'./api';
+import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 
 import './nprogress.css';
 import { Container } from 'react-bootstrap';
@@ -92,8 +91,7 @@ async componentDidMount() {
                 updateNumberOfEvents={this.updateNumberOfEvents}
                 errorText={this.state.errorText} />
       <EventList events={this.state.events}/>
-      <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
-                getAccessToken={() => { getAccessToken() }} />
+      {navigator.onLine && <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />}
     </Container>
   );
  }
