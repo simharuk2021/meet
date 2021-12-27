@@ -8,6 +8,7 @@ import NumberOfEvents from'./NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
 import { Container } from 'react-bootstrap';
+import { WarningAlert } from './Alert';
 
 
 class App extends Component {
@@ -74,6 +75,11 @@ async componentDidMount() {
     
   return (
     <Container className="App">
+      {!navigator.onLine ? (
+						<WarningAlert text="You are offline, the events list has been loaded from the Cache!" />
+					) : (
+						''
+					)}
       <CitySearch locations={this.state.locations} 
                   updateEvents={this.updateEvents} />
       <NumberOfEvents 
