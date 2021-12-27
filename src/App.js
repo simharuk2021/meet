@@ -29,6 +29,7 @@ class App extends Component {
 async componentDidMount() {
   const { numberOfEvents } = this.state;
   this.mounted = true;
+  if (navigator.onLine & !window.location.href.startsWith('http://localhost')) {
   const accessToken = localStorage.getItem('access_token');
   const isTokenValid = (await checkToken(accessToken)).error ? false : true;
   const searchParams = new URLSearchParams(window.location.search);
@@ -39,10 +40,22 @@ async componentDidMount() {
       if (this.mounted) {
       this.setState({
         events: events.slice(0, numberOfEvents),
-        locations: extractLocations(events)});
+        locations: extractLocations(events)
+      });
       }
     });
   }
+}
+else {
+  getEvents().then((events) => {
+    if (this.mounted) {
+      this.setState({
+        events: events.slice(0, this.state.numberOfEvents),
+        locations: extractLocations(events)
+      });
+    }
+  });
+}
 }
   componentWillUnmount(){
     this.mounted = false;
