@@ -80,8 +80,8 @@ async componentDidMount() {
   };
 
   render() {
-  if (this.state.showWelcomeScreen === undefined) return <div
-    className="App" />      
+  // if (this.state.showWelcomeScreen === undefined) return <div
+  //   className="App" />      
     
   return (
     <Container className="App">
