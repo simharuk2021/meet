@@ -7,10 +7,9 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from'./NumberOfEvents';
 import WelcomeScreen from './WelcomeScreen';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
-
 import './nprogress.css';
 import { Container } from 'react-bootstrap';
-
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 
 class App extends Component {
@@ -91,6 +90,16 @@ else {
     }
   };
 
+  getData = () => {
+    const {locations, events} = this.state;
+    const data = locations.map((location)=>{
+      const number = events.filter((event) => event.location === location).length
+      const city = location.split(', ').shift()
+      return {city, number};
+    })
+    return data;
+  };
+
   render() {
   // if (this.state.showWelcomeScreen === undefined) return <div
   //   className="App" />      
@@ -103,6 +112,22 @@ else {
                 numberOfEvents={this.state.numberOfEvents} 
                 updateNumberOfEvents={this.updateNumberOfEvents}
                 errorText={this.state.errorText} />
+                <h4>Events in each city</h4>
+
+      <ScatterChart
+      width={400}
+      height={400}
+      margin={{
+        top: 20, right: 20, bottom: 20, left: 20,
+      }}
+      >
+      <CartesianGrid />
+      <XAxis type="number" dataKey="city" name="city" />
+      <YAxis type="number" dataKey="number" name="number of events" />
+      <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+      <Scatter data={this.getData()} fill="#8884d8" />
+      </ScatterChart>
+
       <EventList events={this.state.events}/>
       {navigator.onLine && <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />}
     </Container>
