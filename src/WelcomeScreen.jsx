@@ -44,7 +44,7 @@ function WelcomeScreen(props) {
               Meet app is a Progressive Web App (PWA) built with React and coded using a test-driven development process. The app uses the Google Calendar API to fetch upcoming events from a a CareerFoundry events calendar.
             </p>
             <p>
-              Once logged in, the app is a single page app with two inputs, one for a city name, and one for a number of events to show. Simply input your desired city and select it from the suggestions dropdown, then narrow down or increase the number of events shown with using the number input. Clicking on the "more details" button for an event will display a description and URL for the event. Clicking the event URL will redirect you to the Google Calendar event.
+              Upon login (using Google verification), the user is greeted by a list of events, the city they are held in and a summary of the event details.  The events by city can be filtered (by city) as can the number of events to be displayed.  The details button will expand the event and futher information will be displayed, the samme button can then be clicked again to hide the details (once they are shown).
             </p>
             <p>
               The Meet app is using https://www.googleapis.com/auth/calendar.events.readonly for
