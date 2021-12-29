@@ -6,7 +6,7 @@ const EventGenre = ({ events }) => {
 	// Creates a function to get genre data from events data
 	useEffect(() => {
 		const getData = () => {
-			const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS'];
+			const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS', 'Angular'];
 
 			const data = genres.map(genre => {
 				const value = events.filter(({ summary }) =>
@@ -19,7 +19,7 @@ const EventGenre = ({ events }) => {
 		setData(() => getData());
 	}, [events]);
 
-	const colors = ['blue', 'red', 'green', 'orange', 'purple'];
+	const colors = ['blue', 'red', 'green', 'orange', 'purple', 'cyan'];
 
 return (
     <ResponsiveContainer height={400} >
