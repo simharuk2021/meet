@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
-// import Event from './Event';
+import EventGenre from './EventGenre';
 import NumberOfEvents from'./NumberOfEvents';
 import WelcomeScreen from './WelcomeScreen';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
@@ -117,6 +117,8 @@ async componentDidMount() {
                 numberOfEvents={this.state.numberOfEvents} 
                 updateNumberOfEvents={this.updateNumberOfEvents}
                 errorText={this.state.errorText} />
+    <div className="data-vis-wrapper">
+							<EventGenre events={this.state.events} />
                 <h4>Events in each city</h4>
     <ResponsiveContainer height={300} width="99%" >
       <ScatterChart margin={{top: 20, right: 20, bottom: 20, left: 20,}}>
@@ -127,10 +129,11 @@ async componentDidMount() {
       <Scatter data={this.getData()} fill="#00008B" />
       </ScatterChart>
     </ResponsiveContainer>
-
-      <EventList events={this.state.events}/>
+    </div>
+    <EventList events={this.state.events}/>
       {navigator.onLine && <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />}
     </Container>
+
     
   );
  }
